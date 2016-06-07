@@ -16,11 +16,18 @@
 
 $(call inherit-product, device/samsung/trltexx/full_trltexx.mk)
 
+
+# Boot animation
+PAC_BOOTANIMATION_NAME := 1440
+
+# Shut Up
+TW_THEME := portrait_hdpi
+
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/pac/config/nfc_enhanced.mk)
 
 # Inherit common CM phone.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/pac/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := trltexx
-PRODUCT_NAME := cm_trltexx
+PRODUCT_NAME := pac_trltexx
